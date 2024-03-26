@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://i.ibb.co/zNF7NGz/762px-The-Great-Gatsby-Cover-1925-Retouched.jpg",
+        "review": "A mesmerizing tale of love, ambition, and tragedy set amidst the roaring twenties. Fitzgerald's prose, elegant and evocative, paints a vivid picture of the Jazz Age, exploring themes of wealth, class, and the elusive American Dream in less than fifty words.",
+        "totalPages": 180,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": ["Romance", "Jazz Age"],
+        "publisher": "Scribner",
+        "yearOfPublishing": 1925
+    },
+    {
+        "id": 2,
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "https://i.ibb.co/74bfKk7/874px-To-Kill-a-Mockingbird-first-edition-cover.jpg",
+        "review": "Harper Lee's masterpiece, a poignant exploration of racial injustice and moral growth in a small Southern town. Through Scout's innocent eyes, Lee unveils the complexities of human nature and societal norms, leaving an indelible mark on readers' hearts.",
+        "totalPages": 324,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": ["Race Relations", "Coming of Age"],
+        "publisher": "J.B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+    },
+    {
+        "id": 3,
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "https://i.ibb.co/4mn3FLG/1984-first-edition-cover.jpg",
+        "review": "George Orwell's chilling dystopian novel depicts a totalitarian regime and the struggle for individual freedom. Through Winston's rebellion against Big Brother, Orwell delivers a stark warning about the dangers of unchecked government power and surveillance, resonating deeply with contemporary society.",
+        "totalPages": 328,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": ["Dystopian", "Totalitarianism"],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+    },
+    {
+        "id": 4,
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://i.ibb.co/YZz1J44/669px-Pride-And-Prejudice-Title-Page.jpg",
+        "review": "A delightful comedy of manners that explores love, marriage, and societal expectations. Jane Austen's wit and keen observations of human nature shine in this timeless classic, where misunderstandings and pride collide amidst the backdrop of Regency-era England.",
+        "totalPages": 432,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": ["Romance", "Regency Era"],
+        "publisher": "T. Egerton, Whitehall",
+        "yearOfPublishing": 1813
+    },
+    {
+        "id": 5,
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "https://i.ibb.co/Dpp9qzx/929px-The-Catcher-in-the-Rye-1951-first-edition-cover.jpg",
+        "review": "J.D. Salinger's compelling narrative of teenage angst and alienation captures the essence of adolescence. Through Holden Caulfield's rebellious journey, Salinger explores themes of identity, innocence, and societal conformity, resonating with readers across generations.",
+        "totalPages": 224,
+        "rating": 4.4,
+        "category": "Fiction",
+        "tags": ["Coming of Age", "Rebellion"],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+    },
+    {
+        "id": 6,
+        "bookName": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.ibb.co/yBNx3dr/The-Hobbit-First-Edition.jpg",
+        "review": "A captivating adventure through Middle-earth filled with dwarves, elves, dragons, and hobbits. J.R.R. Tolkien's masterful storytelling and richly detailed world-building make 'The Hobbit' an enduring classic, enchanting readers of all ages with its timeless charm and epic quest.",
+        "totalPages": 310,
+        "rating": 4.9,
+        "category": "Fantasy",
+        "tags": ["Adventure", "Middle-earth"],
+        "publisher": "George Allen & Unwin",
+        "yearOfPublishing": 1937
+    }
+]

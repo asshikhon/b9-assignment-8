@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
-        <div className="hero bg-[#1313130d] rounded-3xl">
+        <div className="hero bg-[#1313130d] rounded-3xl mb-10 lg:mb-24">
         <div className="hero-content flex-col lg:flex-row">
          
           <div>
-            <h1 className="text-4xl leading-[80px] lg:text-[56px] text-[#131313] font-bold pb-4 lg:pb-12">Books to freshen up <br /> your bookshelf</h1>
+            <h1 className="text-4xl leading-[48px] lg:leading-[80px] lg:text-[56px] text-[#131313] font-bold pb-4 lg:pb-12">Books to freshen up <br /> your bookshelf</h1>
 
             <Link to="/listed">
             <button className="btn bg-[#23BE0A] border-0 font-work-sans btn-primary text-white font-bold text-lg">View The List</button>
