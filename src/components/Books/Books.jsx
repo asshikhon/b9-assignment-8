@@ -10,7 +10,7 @@ const Books = () => {
   }, []);
 
   return (
-    <div>
+    <div className="mb-12 lg:mb-24">
       <div className="pb-6 lg:pb-10">
         <h2 className="text-[40px] text-[#131313] font-bold text-center">
           Books
