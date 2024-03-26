@@ -30,7 +30,10 @@ loader: () => fetch('../books.json'),
     {
     path: "/listed",
     element: <ListedBooks></ListedBooks>,
+    loader: () => fetch('books.json'),
+
     },
+
     
     ]
   },

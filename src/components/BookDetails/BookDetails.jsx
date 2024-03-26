@@ -1,11 +1,27 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css'
+import { saveBook } from "../../utility/localstorage";
+
 
 const BookDetails = () => {
     const books = useLoaderData();
     const {id} = useParams();
     const idInt = parseInt(id);
-    const book = books.find((book) => book.id == idInt);
+    const book = books.find((book) => book.id === idInt);
     const { image, tags, bookName, category, author, rating, review, yearOfPublishing, publisher, totalPages } = book;
+
+const handleApplyRead = () => {
+  saveBook(idInt);
+toast.success('successfully added book for read')
+
+
+}
+const handleApplyWishlist = () => {
+  toast.success('successfully added book in wishlist')
+
+}
 
 
     return (       
@@ -23,9 +39,13 @@ const BookDetails = () => {
     <p className="font-work-sans text-[#131313b3] text-base py-6"><span className="text-[#131313] font-bold leading-6">Review :</span> {review}</p>
 
 <div className="flex gap-4 items-center">
-<h3 className="text-base font-work-sans text-[#131313] font-bold">Tag</h3>
-<h3 className='text-[#23BE0A] font-work-sans text-base font-medium bg-[#23be0a0d] py-2 px-4 rounded-[30px]'>#{tags[0]}</h3>
-<h3 className='text-[#23BE0A] font-work-sans text-base font-medium bg-[#23be0a0d] py-2 px-4 rounded-[30px]'>#{tags[1]}</h3>
+{
+
+tags.map((tag, idx) => <a key={idx} className='text-[#23BE0A] font-work-sans text-base font-medium bg-[#23be0a0d] py-2 px-4 rounded-[30px]'>{tag}</a>
+)
+
+}
+
 
 </div>
 
@@ -49,11 +69,11 @@ const BookDetails = () => {
 </div>
 
     <div className="flex gap-4 mt-5">
-      <button className="btn text-[#131313] bg-transparent border font-work-sans text-base font-semibold">Read</button>
-      <button className="btn bg-[#50B1C9] text-white text-base font-semibold font-work-sans">Wishlist</button>
+      <button onClick={handleApplyRead} className="btn text-[#131313] bg-transparent border font-work-sans text-base font-semibold">Read</button>
+      <button onClick={handleApplyWishlist} className="btn bg-[#50B1C9] text-white text-base font-semibold font-work-sans">Wishlist</button>
     </div>
   </div>
-    
+  <ToastContainer />
 </div>
 
 
