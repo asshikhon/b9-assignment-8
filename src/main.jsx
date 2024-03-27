@@ -43,6 +43,7 @@ loader: () => fetch('/books.json'),
     {
     path: "/pages",
     element: <PagesToRead></PagesToRead>,
+    loader: () => fetch('/books.json'),
     
     },
 {
