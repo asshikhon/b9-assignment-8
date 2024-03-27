@@ -11,7 +11,7 @@ import WishlistBooks from "../WishlistBooks/WishlistBooks";
 const ListedBooks = () => {
   const books = useLoaderData();
   const [appliedBooks, setAppliedBooks] = useState([]);
-  const [appliedWishs, setAppliedWishs] = useState([]);
+  const [appliedWishes, setAppliedWishes] = useState([]);
 
   useEffect(() => {
     const storeBookIds = getStoredBook("read");
@@ -38,9 +38,31 @@ const ListedBooks = () => {
         }
       }
 
-      setAppliedWishs(wishApplied);
+      setAppliedWishes(wishApplied);
     }
   }, [books]);
+
+
+  const handleRating=()=> {
+  const newAppliedBooks = [...appliedBooks].sort((a, b) => a.rating > b.rating ? -1 : 1);
+setAppliedBooks(newAppliedBooks);
+ const newAppliedWishes = [...appliedWishes].sort((a, b) => a.rating < b.rating ? -1 : 1);
+ setAppliedWishes(newAppliedWishes);
+  }
+  const handlePage=()=>{
+    const newAppliedBooks = [...appliedBooks].sort((a, b) => a.totalPages > b.totalPages ? -1 : 1);
+    setAppliedBooks(newAppliedBooks);
+     const newAppliedWishes = [...appliedWishes].sort((a, b) => a.totalPages < b.totalPages ? -1 : 1);
+     setAppliedWishes(newAppliedWishes);
+  }
+  const handlePublisher=()=>{
+    const newAppliedBooks = [...appliedBooks].sort((a, b) => a.yearOfPublishing > b.yearOfPublishing ? -1 : 1);
+    setAppliedBooks(newAppliedBooks);
+     const newAppliedWishes = [...appliedWishes].sort((a, b) => a.yearOfPublishing < b.yearOfPublishing ? -1 : 1);
+     setAppliedWishes(newAppliedWishes);
+  }
+
+
 
   return (
     <div className=" font-work-sans">
@@ -54,13 +76,13 @@ const ListedBooks = () => {
             Sort By <IoIosArrowDown />
           </summary>
           <ul className=" bg-[#1313130d] menu dropdown-content z-[10] rounded-box w-full">
-            <li className="text-[#131313cc] font-semibold">
+            <li onClick={() => handleRating()} className="text-[#131313cc] font-semibold">
               <a>Rating</a>
             </li>
-            <li className="text-[#131313cc] font-semibold">
+            <li onClick={() => handlePage()} className="text-[#131313cc] font-semibold">
               <a>Number of pages</a>
             </li>
-            <li className="text-[#131313cc] font-semibold">
+            <li onClick={() => handlePublisher()} className="text-[#131313cc] font-semibold">
               <a>Publisher year</a>
             </li>
           </ul>
@@ -79,7 +101,7 @@ const ListedBooks = () => {
           ))}
         </TabPanel>
         <TabPanel>
-          {appliedWishs.map((book, idx) => (
+          {appliedWishes.map((book, idx) => (
             <WishlistBooks key={idx} book={book}></WishlistBooks>
           ))}
         </TabPanel>

@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 import { getStoredBook } from "../../utility/localstorage";
 
@@ -13,11 +11,11 @@ const PagesToRead = () => {
 const [books, setBooks] = useState([]);
 
 useEffect(() => {
-const storeBooks = getStoredBook();
+const storeBooks = getStoredBook('read');
 setBooks(storeBooks);
 },[]);
 
-// console.log(books);
+console.log(books);
 
 const data = books.map(book => ({
     name: book && book.bookName ? book.bookName : '',
@@ -68,7 +66,4 @@ const data = books.map(book => ({
 };
 
 export default PagesToRead;
-
-
-
 
