@@ -8,8 +8,8 @@ const WishlistBooks = ({book}) => {
     const {id, image, tags, bookName, totalPages, category ,publisher, yearOfPublishing, author, rating}= book;
     return (
         <div className='flex flex-col md:flex-row p-6 gap-8 border rounded-xl mb-6 mt-8'>
-<div className='bg-[#1313130d] rounded-xl px-12 py-8'>
-    <img className='w-[150px] h-[190px]' src={image} alt="" />
+<div className='bg-[#1313130d] rounded-xl lg:px-12 py-8'>
+    <img className='w-[150px] h-[190px] mx-auto' src={image} alt="" />
 </div>
 
 <div>

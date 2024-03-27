@@ -10,13 +10,13 @@ const ApplyRead = ({book}) => {
 
     return (
 <div className='flex flex-col md:flex-row p-6 gap-8 border rounded-xl mb-6 mt-8'>
-<div className='bg-[#1313130d] rounded-xl px-12 py-8'>
-    <img className='w-[150px] h-[190px]' src={image} alt="" />
+<div className='bg-[#1313130d] rounded-xl lg:px-12 py-8'>
+    <img className='w-[150px] h-[190px] mx-auto' src={image} alt="" />
 </div>
 
 <div>
 <h3 className='text-[#131313] text-2xl font-bold'>{bookName}</h3>
-<h5 className='font-work-sans text-[#131313cc] text-base font-medium pt-1  pb-5'>By : {author}</h5>
+<h5 className='font-work-sans text-[#131313cc] text-base font-medium pt-1 pb-5'>By : {author}</h5>
 
 <div className='flex gap-4 items-center pt-6 overflow-auto flex-col lg:flex-row'>
 <span className='text-base text-[#131313] font-bold'>Tag </span>

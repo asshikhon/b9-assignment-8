@@ -6,7 +6,7 @@ const {id, image, tags, bookName, category, author, rating}= book;
 
     return (
 <Link to={`/book/${id}`} className="card p-6 border rounded-xl">
-  <figure className='bg-[#F3F3F3] rounded-xl'><img className='w-40 h-72  lg:py-14 ' src={image} alt="coming soon.." /></figure>
+  <figure className='bg-[#F3F3F3] rounded-xl'><img className='w-40 h-72 py-10 lg:py-14 ' src={image} alt="coming soon.." /></figure>
 
 <div className='flex gap-4 items-center pt-6'>
 
