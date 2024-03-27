@@ -13,6 +13,10 @@ import BookDetails from './components/BookDetails/BookDetails';
 import PagesToRead from './components/PagesToRead/PagesToRead';
 import Author from './components/Author/Author';
 import Publisher from './components/Publisher/Publisher';
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css'
+
 
 const router = createBrowserRouter([
   {
@@ -61,5 +65,6 @@ element: <Publisher></Publisher>
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />
   </React.StrictMode>,
 )

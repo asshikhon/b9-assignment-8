@@ -1,29 +1,36 @@
 
-import { toast } from 'react-toastify';
-const getStoredBook = () => {
-const storeBook = localStorage.getItem('storeBook');
+const getStoredBook = (str) => {
+const storeBook = localStorage.getItem(str);
 if(storeBook){
-    return JSON.parse(storeBook);
+return JSON.parse(storeBook);
 }
 return [];
-
 }
 
+const saveBook =(id, list, store)=>{
 
-const saveBook = id => {
-const storeBooks = getStoredBook();
-const exists = storeBooks.find(bookId => bookId === id);
-if(exists){
-return toast.error('book already exists')
+const storeReadBooks = getStoredBook(store);
 
+const wishListBooks = getStoredBook(list);
+const exists = storeReadBooks.find((bookId) => bookId === id);
+const wishListExists = wishListBooks.find((bookId) => bookId === id);
+if(!exists){
+if(list === "read"){
+storeReadBooks.push(id);
+localStorage.setItem(list, JSON.stringify(storeReadBooks));
+return "done";
+
+}else{
+if(!wishListExists){
+wishListBooks.push(id);
+localStorage.setItem(list, JSON.stringify(wishListBooks));
+return "done";
 }
-storeBooks.push(id);
-localStorage.setItem('storeBook', JSON.stringify(storeBooks))
-toast.success('successfully added book for read')
-// if(!exists){
-// storeBooks.push(id);
-// localStorage.setItem('storeBook', JSON.stringify(storeBooks))
-// }
-
+return "fail";
+}
+}
+else if(exists && wishListExists){
+return "notDone";
+}
 }
 export {saveBook, getStoredBook}
