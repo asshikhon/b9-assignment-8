@@ -64,6 +64,7 @@ useEffect(() => {
       appliedBooks.map((book, idx) => <ApplyRead key={idx} book={book} ></ApplyRead>)
       
       }
+      
     </TabPanel>
     <TabPanel>
     {
@@ -71,6 +72,7 @@ useEffect(() => {
       appliedBooks.map((book, idx) => <WishlistBooks key={idx} book={book} ></WishlistBooks>)
       
       }
+
     </TabPanel>
   </Tabs>
 

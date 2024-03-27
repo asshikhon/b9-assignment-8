@@ -14,11 +14,12 @@ const BookDetails = () => {
 
 const handleApplyRead = () => {
   saveBook(idInt);
-toast.success('successfully added book for read')
+// toast.success('successfully added book for read')
 
 
 }
 const handleApplyWishlist = () => {
+  // saveBook(idInt);
   toast.success('successfully added book in wishlist')
 
 }

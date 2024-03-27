@@ -17,7 +17,7 @@ fetch('books.json')
     return (
 
 
-        <div>
+        <div className="mb-24">
         <div className="mb-6">
             <h1 className="text-4xl font-semibold font-work-sans flex items-center gap-3"><img className="w-[80px] h-[80px]" src="https://eboighar.com/frontend/assets/images/svg/authors-32x32.svg" alt="" /> Authors</h1>
         </div>
